@@ -7,13 +7,16 @@
 				
 				<script data-main="scripts/main" src="scripts/vendor/requirejs/require.js"></script>
 
-				<link href="http://rnikitin.github.io/assets/css/bootstrap.css" rel="stylesheet">
+				<script src="//rnikitin.github.io/assets/js/bootstrap.js"></script>
+
+				<link href="//rnikitin.github.io/assets/css/bootstrap.css" rel="stylesheet">
+
 				<!--[if lt IE 9]>
 					<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 				<![endif]-->
 				
 				<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-				<link href="http://www.bootply.com/bootply/themes/metroid/theme.css" type="text/css" rel="stylesheet">
+				<link href="//www.bootply.com/bootply/themes/metroid/theme.css" type="text/css" rel="stylesheet">
 
 				<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 				<meta http-equiv="Pragma" content="no-cache" />
@@ -46,40 +49,17 @@
 <!-- Main -->
 
 <div class="row">
-			<div class="col col-lg-3">
-			<!-- Left -->
-			<ul class="nav nav-pills nav-stacked">
-				<li class="nav-header"></li>
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="http://www.bootply.com">Bootply</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-				<li><a href="#">Link ..</a></li>
-				<li><a href="#">Link ..</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Link ..</a></li>
-				<li><a href="#">Link ..</a></li>
-				<li><a href="#">Link ..</a></li>
-				<li><a href="#">Link ..</a></li>
-				<li class="divider"></li>
-				<li><a href="#">Link ..</a></li>
-				<li><a href="#">Link ..</a></li>
-				<li><a href="#">Link ..</a></li>
-				<li><a href="#">Link ..</a></li>
-			</ul>
-	</div><!-- /span-3 -->
-	
-		<div class="col col-lg-9">
-				<!-- Right -->
+	<div class="col col-lg-3" id="sidebar">
+		<!-- Left Sidebar -->
+	</div><!-- /span-3 -->	
+	<div class="col col-lg-9">
+		<!-- Right -->
 			<div class="navbar-inner clearfix">
 						<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-dashboard icon-large"></span> My Dashboard</a>
 						<ul class="nav nav-pills pull-right">
 							<li class="active"><a title="Add Widget" data-toggle="modal" href="#addWidgetModal"><span class="glyphicon glyphicon-plus-sign icon-large"></span> Add Widget</a></li>
 						</ul>
 				</div>
-			
-				
 			
 		<div class="row">
 					<div class="col col-lg-6">
@@ -224,45 +204,6 @@
 		</div><!--/col-span-9--> 
 </div>
 
-<div class="container">
-	<hr>
-	<a href="http://www.bootply.com/61582" title="Bootstrap 3 Dashboard">Edit on Bootply</a>
-	<hr>
-</div>
-
-<!-- /Main -->
-
-<div class="modal" id="addWidgetModal">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-				<h4 class="modal-title">Add Widget</h4>
-			</div>
-			<div class="modal-body">
-				<p>Add a widget stuff here..</p>
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn">Close</a>
-				<a href="#" class="btn btn-primary">Save changes</a>
-			</div>
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dalog -->
-</div><!-- /.modal -->
-
-
-
-	
 				
-		</body>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		
-			ga('create', 'UA-40413119-1', 'bootply.com');
-			ga('send', 'pageview');
-		
-		</script>
+</body>
 </html>

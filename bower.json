@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "requirejs": "latest",
+    "requirejs-text": "latest",
     "jquery": "latest",
     "backbone-amd": "latest",
     "underscore-amd": "latest"
