@@ -1,112 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-		<head>
-				<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
-				<meta charset="utf-8">
-				<title>LinePOS</title>
-				
-				<script data-main="scripts/main" src="scripts/vendor/requirejs/require.js"></script>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	<meta charset="utf-8">
+	<title>LinePOS</title>
+	
+	<script data-main="scripts/main" src="scripts/vendor/requirejs/require.js"></script>
 
-				<script src="//rnikitin.github.io/assets/js/bootstrap.js"></script>
+	<link href="//rnikitin.github.io/assets/css/bootstrap.css" rel="stylesheet">
 
-				<link href="//rnikitin.github.io/assets/css/bootstrap.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+	<link href="//www.bootply.com/bootply/themes/metroid/theme.css" type="text/css" rel="stylesheet">
 
-				<!--[if lt IE 9]>
-					<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-				<![endif]-->
-				
-				<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-				<link href="//www.bootply.com/bootply/themes/metroid/theme.css" type="text/css" rel="stylesheet">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+</head>
+<body>
 
-				<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-				<meta http-equiv="Pragma" content="no-cache" />
-				<meta http-equiv="Expires" content="0" />
-		</head>
-		<body>
-				<!-- Header -->
 <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
 	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
 		<span class="icon-list"></span>
 	</button>
-	<a class="navbar-brand" href="http://www.bootply.com">Dashboard</a>
-	<div class="nav-collapse collapse navbar-responsive-collapse">
-		<ul class="nav navbar-nav pull-right">
-			
-			<li class="dropdown">
-				<a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
-					<strong>Admin</strong> <span class="caret"></span></a>
-				<ul id="g-account-menu" class="dropdown-menu" role="menu">
-					<li><a href="#">My Profile</a></li>
-				</ul>
-			</li>
-			
-			<li><a href="#">Log out</a></li>
-		</ul>
-	</div>
+	<a class="navbar-brand" href="#">LinePOS</a>
 </div>
-<!-- /Header -->
-
-<!-- Main -->
 
 <div class="row">
-	<div class="col col-lg-3" id="sidebar">
-		<!-- Left Sidebar -->
-	</div><!-- /span-3 -->	
-	<div class="col col-lg-9">
-		<!-- Right -->
-			<div class="navbar-inner clearfix">
-						<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-dashboard icon-large"></span> My Dashboard</a>
-						<ul class="nav nav-pills pull-right">
-							<li class="active"><a title="Add Widget" data-toggle="modal" href="#addWidgetModal"><span class="glyphicon glyphicon-plus-sign icon-large"></span> Add Widget</a></li>
-						</ul>
-				</div>
-			
+	<div class="col col-lg-12">
+		<div class="navbar-inner clearfix" id="navbar"></div>
+		
 		<div class="row">
-					<div class="col col-lg-6">
-				<div class="well">Inbox Messages <span class="badge pull-right">3</span></div>
-							
-								<div class="panel">
-										<div class="panel-heading">
-											<i class="icon icon-chevron-up chevron"></i>
-											<i class="icon icon-wrench pull-right"></i> Quick Start
+			<div class="col col-lg-6">
+				<div class="panel">
+					<div class="panel-heading">
+						<i class="icon icon-chevron-up chevron"></i>
+						<i class="icon icon-wrench pull-right"></i> Quick Start
+					</div>
+					<div class="panel-content">
+									<div class="btn-group btn-group-justified">
+										<a href="#" class="btn btn-primary col col-lg-3">
+											<i class="icon-laptop icon-large"></i>
+											<p>Service</p>
+										</a>
+										<a href="#" class="btn btn-primary col col-lg-3">
+											<i class="icon-cloud icon-large"></i>
+											<p>Cloud</p>
+										</a>
+										<a href="#" class="btn btn-primary col col-lg-3">
+											<i class="icon-github icon-large"></i>
+											<p>GitHub</p>
+										</a>
+										<a href="#" class="btn btn-primary col col-lg-3">
+											<span class="glyphicon glyphicon-question-sign icon-large"></span>
+											<p>Help</p>
+										</a>
 									</div>
-									<div class="panel-content">
-										
-											<div class="btn-group btn-group-justified">
-												<a href="#" class="btn btn-primary col col-lg-3">
-													<i class="icon-laptop icon-large"></i>
-													<p>Service</p>
-												</a>
-												<a href="#" class="btn btn-primary col col-lg-3">
-													<i class="icon-cloud icon-large"></i>
-													<p>Cloud</p>
-												</a>
-												<a href="#" class="btn btn-primary col col-lg-3">
-													<i class="icon-github icon-large"></i>
-													<p>GitHub</p>
-												</a>
-												<a href="#" class="btn btn-primary col col-lg-3">
-													<span class="glyphicon glyphicon-question-sign icon-large"></span>
-													<p>Help</p>
-												</a>
-											</div>
-									</div><!--/panel content-->
-							</div><!--/panel-->
+							</div><!--/panel content-->
+					</div><!--/panel-->
 							
 							
 							<div class="panel">
-									<div class="panel-heading">Report</div>
-									<table class="table table-striped">
-									<thead>
-										<tr><th>Col 1</th><th>Col 2</th><th>Col 3</th></tr></thead>
-									<tbody>
-										<tr><td>45</td><td>2.45%</td><td>Direct</td></tr>
-										<tr><td>289</td><td>56.2%</td><td>Referral</td></tr>
-										<tr><td>98</td><td>25%</td><td>Type</td></tr>
-										<tr><td>..</td><td>..</td><td>..</td></tr>
-										<tr><td>..</td><td>..</td><td>..</td></tr>
-									</tbody>
-									</table>
+									<div class="panel-heading">Product List</div>
+									<div id="products"></div>
 							</div><!--/panel-->
 							
 							
@@ -204,6 +163,8 @@
 		</div><!--/col-span-9--> 
 </div>
 
-				
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=2"></' + 'script>')</script>
+
 </body>
 </html>
