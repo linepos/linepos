@@ -28,3 +28,4 @@ Enviroment
 - NodeJS with packages (http-server)
 - Google Chrome Canary Build
 - Bower
+- LiveReload

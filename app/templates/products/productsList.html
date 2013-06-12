@@ -1,8 +1,8 @@
 <table class="table table-striped">
 <thead>
 	<tr>
-		<% _.each(list[0], function(value, key) { %>
-			<td><%= key %></td>
+		<% _.each(headers, function(item) { %>
+			<th><%= item %></th>
 		<% }); %>
 	</tr>
 </thead>
