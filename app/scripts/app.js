@@ -24,6 +24,7 @@ define([
 		},
 		renderLayout: function(){
 			ProductsView.list();
+			ProductsView.renderForm();
 		}
 	});
 

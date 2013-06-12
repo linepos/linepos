@@ -5,7 +5,11 @@ define([
 	Product) {
 
 	var Products = Backbone.Collection.extend({
-		model: Product
+		model: Product,
+		getList: function(){
+			var arr = this.toJSON();
+			return arr;
+		}
 	});
 
 	return Products;

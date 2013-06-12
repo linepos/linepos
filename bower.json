@@ -6,6 +6,7 @@
     "requirejs-text": "latest",
     "jquery": "latest",
     "backbone-amd": "latest",
-    "underscore-amd": "latest"
+    "underscore-amd": "latest",
+    "form2js": "latest"
   }
 }

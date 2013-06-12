@@ -1,6 +1,9 @@
 define([
-	'backbone'
-], function(Backbone) {
+	'jquery',
+	'backbone',
+	'form2js'
+], function($, Backbone,
+	form2js) {
 
 	var Storage = Backbone.View.extend({
 		account: 'linepos',
@@ -13,9 +16,18 @@ define([
 		list: function(collection, callback) {
 			$.ajax({
 				url: this.buildUrl(collection),
-				success: $.proxy(function(json){
-					callback(json);
-				}, this)
+				success: function(json){ callback(json); }
+			});
+		},
+		create: function(collection, $form, callback) {
+			var formObject = form2js($form.get(0));
+
+			$.ajax({
+				url: this.buildUrl("products"),
+				data: JSON.stringify(formObject.product),
+				type: "POST",
+				contentType: "application/json",
+				success: function(json) { callback(json); }
 			});
 		}
 	});

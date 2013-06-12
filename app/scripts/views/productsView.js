@@ -1,36 +1,43 @@
 define([
 	'backbone',
-	'text!templates/products/list.html',
+	'text!templates/products/productsList.html',
+	'text!templates/products/productsForm.html',
 	'collections/products',
 	'storage'
 ], function(Backbone,
-	ProductListTemplate,
+	ProductsListTemplate,
+	ProductsFormTemplate,
 	Products,
 	Storage) {
 
 	var ProductsView = Backbone.View.extend({
 		renderForm: function() {
-			console.log("patron");
+			var tmplOut = _.template(ProductsFormTemplate);
+			$("#productsFormContainer").html(tmplOut());
+
+			this.$productsForm = $("#productsForm");
+			this.$productsForm.delegate("#productsFormSubmit", "click", $.proxy(function(event){
+				this.create();
+				event.preventDefault();
+				return false;
+			}, this));
 		},
 		list: function() {
-			var tmplOut = _.template(ProductListTemplate);
-			$("#products").html(tmplOut());
+			var tmplOut = _.template(ProductsListTemplate);
 
 			Storage.list("products", $.proxy(function(json) {
-				console.log(json);
-			}, this));
+				var ProductsCollection = new Products(json);
 
-			//var ProductsCollection = new Products();
+				$("#productsList").html(tmplOut({
+					list: ProductsCollection.getList()
+				}));
+			}, this));
 		},
 		create: function() {
-			$.ajax({
-				url: Mongolab.url("products"),
-				data: JSON.stringify({
-					"x" : 1
-				}),
-				type: "POST",
-				contentType: "application/json"
-			});
+			Storage.create("products", this.$productsForm, $.proxy(function(json){
+				this.list();
+				this.renderForm();
+			}, this));
 		}
 	});
 

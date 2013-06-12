@@ -1,0 +1,18 @@
+<table class="table table-striped">
+<thead>
+	<tr>
+		<% _.each(list[0], function(value, key) { %>
+			<td><%= key %></td>
+		<% }); %>
+	</tr>
+</thead>
+<tbody>
+	<% _.each(list, function(item) { %>
+		<tr>
+			<% _.each(item, function(value) { %>
+				<td><%= value %></td>
+			<% }); %>
+		</tr>
+	<% }); %>
+</tbody>
+</table>
