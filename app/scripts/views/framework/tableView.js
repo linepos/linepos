@@ -8,15 +8,15 @@ define([
 
 		initialize: function(){
 			this.templateRendered = _.template(this.template);
+			this.collection = new this.collectionClass();
 		},
 
 		renderList: function(){
-			this.collection = new this.collectionClass();
-			this.collection.populate();
+			this.collection.populate($.proxy(this.renderTemplate, this));
+		},
 
-			console.log(this.collection.getList());
-
-			$("#productsList").html(this.templateRendered({
+		renderTemplate: function() {
+			this.$el.html(this.templateRendered({
 				headers: this.collection.getHeaders(),
 				list: this.collection.getList()
 			}));

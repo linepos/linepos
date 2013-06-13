@@ -32,14 +32,6 @@ define([
 			}
 
 			return false;
-		},
-
-		extendDefaults: function(source, destiny) {
-			var defaultsClone = _.clone(source.prototype.defaults);
-			_.extend(
-				source.prototype.defaults,
-				destiny.prototype.defaults,
-				defaultsClone);
 		}
 
 	};

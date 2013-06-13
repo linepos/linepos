@@ -1,27 +1,15 @@
 define([
 	'backbone',
 	'util',
-	'storage',
+	'collections/framework/baseCollection',
 	'models/product'
 ], function(Backbone, util,
-	Storage,
+	BaseCollection,
 	Product) {
 
-	var Products = Backbone.Collection.extend({
+	var Products = BaseCollection.extend({
 		model: Product,
-		collectionName: "products",
-		url: Storage.buildUrl("products"),
-		getList: function(){
-			return util.getFlatObject(this.toJSON());
-		},
-		getHeaders: function(){
-			return util.getFlatKeys(this.toJSON());
-		},
-		populate: function() {
-			this.fetch();
-			console.log(this);
-			console.log(this.toJSON());
-		}
+		collectionName: "products"
 	});
 
 	return Products;

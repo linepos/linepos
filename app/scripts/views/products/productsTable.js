@@ -12,16 +12,20 @@ define([
 	var ProductsTable = TableView.extend({
 		collectionClass: Products,
 		template: ProductsListTemplate,
+		el: $("#productsList"),
 
 		initialize: function() {
 			this._super = TableView.prototype;
 			this._super.initialize.call(this);
 
+			this.render();
+		},
+
+		render: function() {
 			this._super.renderList.call(this);
 		}
-	});
 
-	util.extendDefaults(TableView, ProductsTable);
+	});
 
 	return ProductsTable;
 });
