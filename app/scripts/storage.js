@@ -27,7 +27,7 @@ define([
 				data: JSON.stringify(formObject.product),
 				type: "POST",
 				contentType: "application/json",
-				success: function(json) { callback(json); }
+				success: callback
 			});
 		}
 	});
